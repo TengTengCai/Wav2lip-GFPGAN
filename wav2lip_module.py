@@ -248,7 +248,7 @@ def start(face_path, audio_path, outfile='results/result_voice.mp4', checkpoint_
 
 
 def main():
-    start('test/test.jpg', 'test/ttsmaker-file-2023-2-21-15-47-32.mp3')
+    start('test/face.jpg', 'test/ttsmaker-file-2023-2-21-15-47-32.mp3')
 
 
 if __name__ == '__main__':

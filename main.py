@@ -18,8 +18,8 @@ args = parser.parse_args()
 
 
 def main():
-    wav2lip_module.start(args.face, args.audio, fps=args.fps)
-    concated_video_output_path = gfpgan_module.start(args.face, fps=args.fps)
+    outfile = wav2lip_module.start(args.face, args.audio, fps=args.fps)
+    concated_video_output_path = gfpgan_module.start(outfile, fps=args.fps)
     final_processed_ouput_video = 'results/final_with_audio.avi'
     command = f'ffmpeg -y -i {concated_video_output_path} -i {args.audio} ' \
               f'-map 0 -map 1:a -c:v copy {final_processed_ouput_video}'
